@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./Navbar/Navbar";
 import { data } from "../APIS/Appointmentdata";
 import Table from "./Table/Table";
+import { UserAddOutlined } from "@ant-design/icons";
+
 export function Appointments() {
   return (
     <div>
@@ -9,7 +11,14 @@ export function Appointments() {
       <div className="appointments">
         <h1 className="appointments-header">Appointments</h1>
 
-        <p className="booked-appointments">List of booked appointments</p>
+        <div className="booked-appointments">
+          <span>List of booked appointments</span>
+          <span>
+            <button>
+              Add <UserAddOutlined />
+            </button>
+          </span>
+        </div>
         <div className="filter-appointments">
           <span className="search-appointments">
             <label>Search</label>

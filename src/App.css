@@ -407,13 +407,26 @@ select{
 }
 
 .booked-appointments{
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem ;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid rgb(122, 122, 122);
   opacity: 50%;
 }
 
+.booked-appointments button{
+  padding: 5px 20px;
+  color: #FC6964;
+  border: 1px solid #fc6964;
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .filter-appointments{
-  padding-top: 1rem ;
+  padding-top: 0.5rem ;
   display: flex;
   align-items: center;
 }
