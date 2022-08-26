@@ -1,38 +1,474 @@
+*{
+  padding: 0;margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left{
+  background-color: rgb(211, 236, 248);
+  text-align: center;
+  padding-top: 100px;
+  width: 60vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome h2{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome p{
+  color: rgb(95, 95, 95);
+  font-weight: 10;
+}
+
+.welcome img{
+  padding-top: 1rem;
+  width: 500px;
+}
+
+.right{
+  width: 40vw;
+  background-color: rgb(247, 247, 247);
+}
+
+.formContent{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.formContent{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.form h2{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form{
+  padding-top: 200px;
+  font-size: 1.2rem;
+}
+
+input{
+  margin: 0.5rem;
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 196, 196);
+  font-size: 1rem;
+}
+
+select{
+  margin: 0.5rem;
+  font-size: 1rem;
+  padding: 10px 20px;
+  width: 245px;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 196, 196);
+  cursor: pointer;
+}
+
+.signIn{
+  margin-top: 3rem;
+  border: none;
+  background-color: rgb(223, 70, 0);
+  width: 245px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Dashboard */
+
+.appointment-header{
+  background-color: rgb(6, 38, 97);
+  color: white;
+  width: 1530px;
+  height: 214px;
+}
+
+.appointment-header h1{
+  padding-top: 1rem;
+  padding-left: 5rem;
+}
+.appointment-header p{
+  padding-top: 1rem;
+  padding-left: 5rem;
+}
+
+.navbar-icons{
+  padding: 25px 10px;
+  font-size: 1.2rem;
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+  border: 2px solid rgb(6, 38, 97);
+}
+
+.navbar-icons:hover{
+  color: white;
+  border-right: 2px solid orangered;
+}
+.navbarActive{
+  color: white;
+  border-right: 2px solid orangered;
+}
+
+.earnings{
+  max-width: 851px;
+}
+
+.earnings-top label{
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.earnings-values{
+  margin-bottom: 5rem;
+}
+
+.numbers{
+  font-size: 24px;
+  padding-top: 10px;
+  font-weight: 500;
+  line-height: 29.05px;
+}
+
+.earnings-top select{
+  width: 183px;
+}
+
+.appointment-numbers{
+  align-items: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(181, 229, 248);
+  border-radius: 10px;
+  width: 851px;
+  height: 181px;
+  position: absolute;
+  padding-top: 1rem;
+  top: 222px;
+  left: 116px;
+}
+
+.earnings-top{
+  display: flex;
+  padding: 1rem 0;
+  justify-content: space-around;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 6px;
+  align-items: center;
+  width: 851px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  top: 168px;left: 116px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* activity article */
+
+.activity-article{
+  border: 1px solid rgb(192, 192, 192);
+  width: 35vw;
+  max-width: 408px;
+  height: 616px;
+  position: absolute;
+  top: 42px;
+  left: 999px;
+  background-color: #fff;
+}
+
+.hospital-logo img{
+  width: 100px;height: 60px;
+}
+
+.activity{
+  padding: 1rem 1rem;
+  font-size: 14px;
+}
+
+.activity-time{
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 50%;
+}
+
+.activity-icon{
+  font-size: 24px;
+  padding: 1rem;
+}
+
+/* Appointments article */
+
+.appointment-article{
+  padding: 5px 10px;
+  position: absolute;
+  width: 407px;height: 565px;
+  top: 435px;left: 117px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 6px;
+}
+
+.appointment-article h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #29375F;
+}
+
+.appointments-header{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.waiting-queue{
+  padding: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.viewQueue{
+  color: red;
+  opacity: 80%;
+}
+
+.content img{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.appointment-person{
+  display: flex;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.appointment-person .name{
+  padding-left: 1rem;
+}
+
+.img-name{
+  display: flex;
+}
+
+.appointment-status p{
+  border: none;
+  padding: 2px 8px;
+  border-radius: 34px;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-weight: 400;
+  color: #965E00;
+  background-color: #FFECCC;
+}
+
+.tobeFinalized{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.appointment-time{
+  font-size: 12px;
+  opacity: 80%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.last-person{
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #000;
+}
+
+.view-all-appointments{
+  padding-top: 1.5rem;
+  color: #FC6964;
+}
+
+/* Schedule article */
+
+.schedule{
+  box-sizing: border-box;
+  position: absolute;
+  width: 407px;
+  height: 575px;
+  left: 556px;
+  top: 435px;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+
+.schedule-anytime{
+  border: 1px solid rgb(190, 190, 190);
+  padding: 19px 171px 20px 16px;
+  border-radius: 6px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(238, 238, 241, 0.4);
+}
+
+.schedule-header{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.schedule-timing{
+  background-color: rgba(10, 148, 16, 0.04);
+  color: #008D17;
+  padding: 12px;
+  margin: 2px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-timing-block{
+  padding: 12px;
+  margin: 2px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #FC6964;
+  background-color: rgba(252, 105, 100, 0.08);
+}
+
+.schedule-day{
+  margin: 8px;
+  padding-left: 10px;
+}
+
+.schedule-day:last-of-type{
+  padding: 2rem;
+  border-bottom: 1px solid #000;
+}
+
+.wednesday{
+  margin: 8px;
+  padding-left: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.schedule-status{
+  display: flex;
+}
+
+.view-all-schedule{
+  color: #fc6964;
+  padding: 1rem;
+}
+
+.exc{
+  opacity: 50%;
+}
+
+.receive{
+  opacity: 50%;
+}
+
+/* Appointments page */
+
+.appointments{
+  padding: 50px 100px;
+}
+
+.appointments-header{
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32.5px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.booked-appointments{
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(122, 122, 122);
+  opacity: 50%;
+}
+
+.filter-appointments{
+  padding-top: 1rem ;
+  display: flex;
+  align-items: center;
+}
+.filter-appointments label{
+  padding-left: 10px;
+}
+
+.filter-appointments select{
+  width: 183px;
+  padding: 16px 0;
+  border-radius: 12px;
+}
+
+.filter-appointments input{
+  width: 300px;
+  height: 31px;
+  border-radius: 12px;
+}
+
+/* appointments-table */
+
+.appointments-table{
+  position: absolute;
+  width: 1261px;
+  height: 575px;
+  left: 109px;
+  top: 268px;
+}
+table{
+  border: 1px solid rgb(196, 196, 196);
+}
+
+th{
+  color: #29375F 60%;
+  padding: 16px 32px;
+  text-align: start;
+  font-size: 12px;
+  background-color: #F0F4FD;
+}
+
+td{
+  padding: 16px 32px;
+  text-align: start;
+  font-size: 14px;
+}
+
+/* Consultation-chart */
+
+.consultation-chart{
+  padding: 1rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 117px;
+  top: 1032px;
+  width: 846px;
+  height: 408px;
+  border: 1px solid gray;
 }

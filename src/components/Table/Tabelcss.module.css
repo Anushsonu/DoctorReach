@@ -1,0 +1,30 @@
+.cancelled{
+    color: red;
+    border-radius: 34px;
+    border: 1px solid black;
+    border-radius: 34px;
+}
+
+.paid{
+    color: rgb(32, 247, 32);
+}
+
+.unpaid{
+    color: red;
+}
+
+.invoice{
+    border: 1px solid black;
+    text-align: center;
+    padding: 1px 4px;
+    border-radius: 34px;
+}
+
+.refunded{
+    color: rgb(156, 156, 156);
+}
+
+.consultationIcon{
+    padding-right: 5px;
+}
+

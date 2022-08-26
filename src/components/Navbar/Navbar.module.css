@@ -1,0 +1,9 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 1rem;
+    background-color: rgb(6, 38, 97);
+    height: 1340px;
+  }
+  
