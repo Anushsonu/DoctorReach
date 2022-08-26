@@ -204,6 +204,7 @@ select{
 .activity{
   padding: 1rem 1rem;
   font-size: 14px;
+  color: #29375F;
 }
 
 .activity-time{

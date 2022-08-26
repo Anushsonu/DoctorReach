@@ -1,5 +1,6 @@
 import React from "react";
 import { BellFilled } from "@ant-design/icons";
+import { SettingTwoTone } from "@ant-design/icons";
 import Prkhospital from "../../images/prkhospital.jpeg";
 
 export function ActivityArticle() {
@@ -19,9 +20,9 @@ export function ActivityArticle() {
         <p>Vivek Kumar accepted the invitation</p>
       </div>
       <div className="activity">
-        <p>
+        <span>
           User Activity &#183;<span className="activity-time">8:16</span>
-        </p>
+        </span>
         <p>Ritu M, blocked their calender for 15th Septmber</p>
       </div>
       <div className="activity">
