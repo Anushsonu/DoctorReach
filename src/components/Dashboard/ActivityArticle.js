@@ -1,9 +1,37 @@
 import React from "react";
 import { BellFilled } from "@ant-design/icons";
+import { data } from "../../APIS/ActivityData";
 import { SettingTwoTone } from "@ant-design/icons";
+import ManageAccountsTwoToneIcon from "@mui/icons-material/ManageAccountsTwoTone";
 import Prkhospital from "../../images/prkhospital.jpeg";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import AssignmentTwoToneIcon from "@mui/icons-material/AssignmentTwoTone";
+import InventoryTwoToneIcon from "@mui/icons-material/InventoryTwoTone";
+import NotificationsActiveTwoToneIcon from "@mui/icons-material/NotificationsActiveTwoTone";
 
-export function ActivityArticle() {
+export function ActivityArticle(props) {
+  const { data } = props;
+  function renderActivityType(data) {
+    console.log(data);
+    if (data === "Summary") {
+      return (
+        <span className="current-activity">
+          <AssignmentTwoToneIcon />
+        </span>
+      );
+    } else if (data === "Application Update") {
+      return (
+        <span className="current-activity">
+          <InventoryTwoToneIcon />
+        </span>
+      );
+    } else
+      return (
+        <span className="current-activity">
+          <ManageAccountsTwoToneIcon />
+        </span>
+      );
+  }
   return (
     <div className="activity-article">
       <div className="hospital-logo">
@@ -13,37 +41,27 @@ export function ActivityArticle() {
         <BellFilled />
         <span> ACTIVITY</span>
       </div>
-      <div className="activity">
-        <p>
-          User Activity &#183; <span className="activity-time">12:32</span>
-        </p>
-        <p>Vivek Kumar accepted the invitation</p>
-      </div>
-      <div className="activity">
-        <span>
-          User Activity &#183;<span className="activity-time">8:16</span>
+      {data.map((el) => (
+        <div className="activity">
+          {renderActivityType(el.type)}
+          <span className="current-activity-summary">
+            <span className="activity-time">{el.type} &#183;8:00</span>
+            <span>{el.name} is my summary for this particular project</span>
+          </span>
+        </div>
+      ))}
+      {/* <div className="activity">
+        <span className="current-activity">
+          <ManageAccountsTwoToneIcon />
         </span>
-        <p>Ritu M, blocked their calender for 15th Septmber</p>
-      </div>
-      <div className="activity">
-        <p>
-          Summary &#183;<span className="activity-time">8:00</span>
-        </p>
-        <p>This is my summary for this particular project</p>
-      </div>
-      <div className="activity">
-        <p>
-          Application update &#183;
-          <span className="activity-time">yesterday</span>
-        </p>
-        <p>This is my summary for this particular project</p>
-      </div>
-      <div className="activity">
-        <p>
-          User Activity &#183;<span className="activity-time">2 days ago</span>
-        </p>
-        <p>Vivek Kumar accepted the invitation</p>
-      </div>
+        <span className="current-activity-summary">
+          <span className="activity-time">Summary &#183;8:00</span>
+          <span>
+            {" "}
+            {props.data.name} is my summary for this particular project
+          </span>
+        </span>
+      </div> */}
     </div>
   );
 }

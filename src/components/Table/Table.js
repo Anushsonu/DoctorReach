@@ -101,12 +101,6 @@ export default function Table(props) {
             </td>
           </tr>
         ))}
-
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
       </table>
     </div>
   );

@@ -188,7 +188,7 @@ select{
 
 .activity-article{
   border: 1px solid rgb(192, 192, 192);
-  width: 35vw;
+  width: 50vw;
   max-width: 408px;
   height: 616px;
   position: absolute;
@@ -205,6 +205,20 @@ select{
   padding: 1rem 1rem;
   font-size: 14px;
   color: #29375F;
+  display: flex;
+}
+
+.current-activity{
+  width: 30px;
+}
+
+.activity-time{
+  margin-right: -1rem;
+}
+
+.current-activity-summary{
+  display: flex;
+  flex-direction: column;
 }
 
 .activity-time{

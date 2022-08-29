@@ -1,4 +1,6 @@
 import React from "react";
+
+import { data } from "../APIS/ActivityData";
 import { AppointmentArticle } from "../components/Dashboard/AppointmentArticle";
 import { ActivityArticle } from "../components/Dashboard/ActivityArticle";
 import Navbar from "./Navbar/Navbar";
@@ -52,7 +54,7 @@ export const Dashboard = (props) => {
           <span className="numbers">30</span>
         </span>
       </div>
-      <ActivityArticle />
+      <ActivityArticle data={data} />
       <AppointmentArticle />
       <Schedule />
       <ConsultationHistory />
